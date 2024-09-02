@@ -16,18 +16,24 @@ O projeto funciona usando python, em conjunto com as bibliotecas:
 nmap, os e rich-console.
 
 Instale as bibliotecas necessárias com o comando:
-> pip install -r requirements.txt
+``` sh
+pip install -r requirements.txt
+```
 
 Além disso, verifique que possui a ferramenta NMAP instalada. Senão, para distribuições linux Ubuntu, rode:
 
-> sudo apt-get update
->
-> sudo apt-get install nmap
+``` sh
+sudo apt-get update
+
+sudo apt-get install nmap
+```
 
 ## Primeira Execução
 Execute o comando para iniciar o programa python:
 
-> python terminal_nmap.py
+``` sh
+python terminal_nmap.py
+```
 
 ## Uso
 
