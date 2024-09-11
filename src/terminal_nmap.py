@@ -24,7 +24,7 @@ def scanNetwork(network):
             print(f'{scanner[host]["hostnames"][0]["name"]}')
         
 
-def scanHost(network, ports):
+def scan_host(network, ports):
     print(f"Scanning network {network}...")
     scanner.scan(hosts=network, arguments=f"-p {ports}")
     for host in scanner.all_hosts():
