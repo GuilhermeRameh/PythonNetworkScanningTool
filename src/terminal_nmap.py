@@ -88,16 +88,14 @@ def option2_screen():
         choice = Prompt.ask("Digite o IP do Host (para voltar digite 'Back')")
         if choice == "Back":
             break
-        else:
-            ports = Prompt.ask(
-                "Agora digite o intervalo de portas dado esse formato:\n"
-                "    [italic white]<menor porta>-<maior porta>[/italic white]",
-                default="1-1000",
-            )
+          ports = Prompt.ask(
+              "Agora digite o intervalo de portas dado esse formato:\n"
+              "    [italic white]<menor porta>-<maior porta>[/italic white]",
+              default="1-1000",
+          )
 
-            scan_host(choice, ports)
-            Prompt.ask("[bold red]aperte 'ENTER' para continuar[/bold red]")
-            break
+          scan_host(choice, ports)
+          Prompt.ask("[bold red]aperte 'ENTER' para continuar[/bold red]")
 
 
 if __name__ == "__main__":
