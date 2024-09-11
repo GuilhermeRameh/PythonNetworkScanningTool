@@ -72,7 +72,7 @@ def option2_screen():
             break
         else:
             ports = Prompt.ask("Agora digite o intervalo de portas dado esse formato:\n    [italic white]<menor porta>-<maior porta>[/italic white]", default="1-1000")
-            scanHost(choice, ports)
+            scan_host(choice, ports)
             Prompt.ask("[bold red]aperte 'ENTER' para continuar[/bold red]")
             break
             
