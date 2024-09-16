@@ -72,10 +72,10 @@ def option1_screen():
         choice = Prompt.ask("Digite o ip da sua rede (para voltar digite 'Back')")
         if choice == "Back":
             break
-        else:
-            scan_network(choice)
-            Prompt.ask("[bold red]aperte 'ENTER' para continuar[/bold red]")
-            break
+
+        scan_network(choice)
+        Prompt.ask("[bold red]aperte 'ENTER' para continuar[/bold red]")
+        break
 
 
 def option2_screen():
