@@ -25,19 +25,19 @@ def scan_network(network):
             print(f'{scanner[host]["hostnames"][0]["name"]}')
 
 
-def scan_host(network, ports):
+def scan_host(network, ports, function_scanner):
     """Print scan results for a single host"""
     print(f"Scanning network {network}...")
-    scanner.scan(hosts=network, arguments=f"-p {ports}")
-    for host in scanner.all_hosts():
+    function_scanner.scan(hosts=network, arguments=f"-p {ports}")
+    for host in function_scanner.all_hosts():
         print(f"\nScan results for {host}:")
-        for proto in scanner[host].all_protocols():
+        for proto in function_scanner[host].all_protocols():
             print(f"Protocol : {proto}")
-            lport = scanner[host][proto].keys()
+            lport = function_scanner[host][proto].keys()
             lport = sorted(lport)
             for port in lport:
-                print(f"port: {port} ({scanner[host][proto][port]['name']})")
-                print(f"state: {scanner[host][proto][port]['state']}")
+                print(f"port: {port} ({function_scanner[host][proto][port]['name']})")
+                print(f"state: {function_scanner[host][proto][port]['state']}")
 
 
 console = Console()
@@ -94,7 +94,7 @@ def option2_screen():
             default="1-1000",
         )
 
-        scan_host(choice, ports)
+        scan_host(choice, ports, scanner)
         Prompt.ask("[bold red]aperte 'ENTER' para continuar[/bold red]")
 
 
